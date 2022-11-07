@@ -51,6 +51,8 @@ public class MovimientoJugador : MonoBehaviour
 
         animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
 
+        animator.SetFloat("VelocidadY", rb2D.velocity.y);
+
 
         if (Input.GetButtonDown("Jump"))
         {
