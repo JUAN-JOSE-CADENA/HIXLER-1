@@ -5290,7 +5290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146e6b39c7f56004b88a1dcdb98afce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 100
+  vida: 0
   maximoVida: 100
   barraDeVida: {fileID: 563544890}
   tiempoPerdidaControl: 1
