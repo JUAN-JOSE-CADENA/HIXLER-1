@@ -58,7 +58,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Home()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(0);
     }
 
 

@@ -42,6 +42,12 @@ TagManager:
   - name: Fondo
     uniqueID: 539528873
     locked: 0
+  - name: Adorno
+    uniqueID: 778524155
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Suelo
+    uniqueID: 629306285
     locked: 0

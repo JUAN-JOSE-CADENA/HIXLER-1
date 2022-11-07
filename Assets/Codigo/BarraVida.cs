@@ -7,6 +7,7 @@ public class BarraVida : MonoBehaviour
 {
 
     private Slider slider;
+    //private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class BarraVida : MonoBehaviour
     public void CambiarVidaActual(float cantidadVida)
     {
         slider.value = cantidadVida;
+        //animator.SetTrigger("Golpe");
     }
 
 
