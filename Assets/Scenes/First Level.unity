@@ -1669,9 +1669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b449f3b33f4e24cb720d2766393b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivo: {fileID: 1140953734}
-  suavizado: 5
-  desface: {x: 0, y: 0, z: 0}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,7 +2259,7 @@ GameObject:
   - component: {fileID: 688955168}
   - component: {fileID: 688955167}
   - component: {fileID: 688955169}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: graveyard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3257,7 +3254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022598952}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3664,10 +3661,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1140953734}
   - component: {fileID: 1140953733}
-  - component: {fileID: 1140953732}
   - component: {fileID: 1140953735}
-  - component: {fileID: 1140953736}
   - component: {fileID: 1140953737}
+  - component: {fileID: 1140953738}
+  - component: {fileID: 1140953739}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -3675,29 +3672,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1140953732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140953731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3ec63a6df5a6a4e8cf5b5371bcda2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  jumpHeight: 5
-  groundCheck: {fileID: 1248123397}
-  isGrounded: 1
-  groundCheckRadius: 0.2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  rb2D: {fileID: 0}
-  sePuedeMover: 1
-  velocidadRebote: {x: 0, y: 0}
 --- !u!212 &1140953733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3787,22 +3761,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &1140953736
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140953731}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: -0.050506413}
-  m_Size: {x: 0.18, y: 0.5189872}
-  m_Direction: 0
 --- !u!95 &1140953737
 Animator:
   serializedVersion: 4
@@ -3823,6 +3781,53 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1140953738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140953731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31214ff086ec6e04480958793471878e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadDeMovimiento: 200
+  suavizadoDeMovimiento: 0.057
+  fuerzaDeSalto: 200
+  queEsSuelo:
+    serializedVersion: 2
+    m_Bits: 2048
+  controladorSuelo: {fileID: 1248123397}
+  dimensionesCaja: {x: 0.3, y: 0.03, z: 0}
+  enSuelo: 0
+--- !u!61 &1140953739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140953731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e28ae0e21adcf0f46bed21ff1403d74e, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.039108492, y: -0.024864055}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.62, y: 0.54}
+    newSize: {x: 0.62, y: 0.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18055366, y: 0.4379266}
+  m_EdgeRadius: 0
 --- !u!1 &1149719041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,7 +4130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248123397}
   m_Layer: 6
-  m_Name: GroundCheck
+  m_Name: ControladorSuelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4534,7 +4539,7 @@ GameObject:
   - component: {fileID: 1592874778}
   - component: {fileID: 1592874777}
   - component: {fileID: 1592874779}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: graveyard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5507,7 +5512,7 @@ GameObject:
   - component: {fileID: 1868602063}
   - component: {fileID: 1868602065}
   - component: {fileID: 1868602064}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: graveyard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
