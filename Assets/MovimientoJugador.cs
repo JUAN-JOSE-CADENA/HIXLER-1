@@ -6,36 +6,30 @@ public class MovimientoJugador : MonoBehaviour
 {
 
     private Rigidbody2D rb2D;
-
     private float movimientoHorizontal;
-
     [SerializeField] private float velocidadDeMovimiento;
-
     [Range(0, 0.3f)] [SerializeField] private float suavizadoDeMovimiento;
-
     private Vector3 velocidad = Vector3.zero;
-
     private bool mirandoDerecha = true;
 
 
     //salto
-
     [SerializeField] private float fuerzaDeSalto;
-
     [SerializeField] private LayerMask queEsSuelo;
-
     [SerializeField] private Transform controladorSuelo;
-
     [SerializeField] private Vector3 dimensionesCaja;
-
     [SerializeField] private bool enSuelo;
-
     private bool salto = false;
 
 
     //ANIMACION
-
     private Animator animator;
+
+
+    //REBOTE
+    public bool sePuedeMover = true;
+    [SerializeField] private Vector2 velocidadRebote;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -68,8 +62,11 @@ public class MovimientoJugador : MonoBehaviour
         animator.SetBool("enSuelo", enSuelo);
 
         //Mover
-        Mover(movimientoHorizontal * Time.fixedDeltaTime, salto);
-
+        if (sePuedeMover)
+        {
+            Mover(movimientoHorizontal * Time.fixedDeltaTime, salto);
+        }
+       
         salto = false;
     }
 
@@ -97,6 +94,13 @@ public class MovimientoJugador : MonoBehaviour
             enSuelo = false;
             rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
         }
+    }
+
+
+    public void Rebote(Vector2 puntoGolpe)
+    {
+        rb2D.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, velocidadRebote.y);
+
     }
 
 

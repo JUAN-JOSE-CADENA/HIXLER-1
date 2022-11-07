@@ -9,14 +9,14 @@ public class CombateJugador : MonoBehaviour
     [SerializeField] private float maximoVida;
     [SerializeField] private BarraVida barraDeVida;
 
-    private PlayerController movimientoJugador;
+    private MovimientoJugador movimientoJugador;
     [SerializeField] private float tiempoPerdidaControl;
     private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        movimientoJugador = GetComponent<PlayerController>();
+        movimientoJugador = GetComponent<MovimientoJugador>();
         animator = GetComponent<Animator>();
 
         vida = maximoVida;
@@ -24,11 +24,6 @@ public class CombateJugador : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void TomarDaño(float daño)
     {

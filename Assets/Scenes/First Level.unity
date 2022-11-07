@@ -2426,7 +2426,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 563544887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3231b8b432fb2043a2f7daf5123e884, type: 3}
+  m_Script: {fileID: 11500000, guid: ebfb6153f1ceb344588a5050cf124e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &569181556
@@ -5112,6 +5112,7 @@ GameObject:
   - component: {fileID: 1140953737}
   - component: {fileID: 1140953738}
   - component: {fileID: 1140953739}
+  - component: {fileID: 1140953740}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5242,13 +5243,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 200
   suavizadoDeMovimiento: 0.057
-  fuerzaDeSalto: 200
+  fuerzaDeSalto: 250
   queEsSuelo:
     serializedVersion: 2
     m_Bits: 2048
   controladorSuelo: {fileID: 1248123397}
   dimensionesCaja: {x: 0.3, y: 0.03, z: 0}
   enSuelo: 0
+  sePuedeMover: 1
+  velocidadRebote: {x: 10, y: 10}
 --- !u!61 &1140953739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5275,6 +5278,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18055366, y: 0.4379266}
   m_EdgeRadius: 0
+--- !u!114 &1140953740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140953731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146e6b39c7f56004b88a1dcdb98afce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  maximoVida: 100
+  barraDeVida: {fileID: 563544890}
+  tiempoPerdidaControl: 1
 --- !u!1 &1149719041
 GameObject:
   m_ObjectHideFlags: 0

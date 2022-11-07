@@ -15,10 +15,6 @@ public class BarraVida : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void CambiarVidaMaxima(float vidaMaxima)
     {
