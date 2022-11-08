@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class DañoBola : MonoBehaviour
 {
-
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<CombateJugador>().TomarDaño(20, other.GetContact(0).normal);
+            collision.GetComponent<CombateJugador>().TomarDaño(20);
         }
     }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if(other.gameObject.CompareTag("Player"))
+    //    {
+    //        other.gameObject.GetComponent<CombateJugador>().TomarDaño(20, other.GetContact(0).normal);
+    //    }
+    //}
 }

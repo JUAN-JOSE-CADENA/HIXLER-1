@@ -3349,9 +3349,10 @@ GameObject:
   - component: {fileID: 764182127}
   - component: {fileID: 764182129}
   - component: {fileID: 764182128}
-  - component: {fileID: 764182130}
   - component: {fileID: 764182131}
   - component: {fileID: 764182132}
+  - component: {fileID: 764182130}
+  - component: {fileID: 764182133}
   m_Layer: 0
   m_Name: BolaDeFuego
   m_TagString: Untagged
@@ -3500,6 +3501,18 @@ CircleCollider2D:
   m_Offset: {x: 0.02, y: -0.22}
   serializedVersion: 2
   m_Radius: 0.36
+--- !u!114 &764182133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764182126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37382e5a7103f72479e62139d1bf42af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829582599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5051,7 +5064,7 @@ GameObject:
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1133256638
 Transform:
   m_ObjectHideFlags: 0
@@ -5262,7 +5275,6 @@ MonoBehaviour:
   vida: 0
   maximoVida: 100
   barraDeVida: {fileID: 563544890}
-  tiempoPerdidaControl: 1
 --- !u!1 &1149719041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,7 +5622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251858832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.6180005, y: 1.335, z: -0.065571636}
+  m_LocalPosition: {x: 6.745, y: 0.682, z: -0.065571636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6262,7 +6274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541500516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.607, y: 0.5, z: -0.065571636}
+  m_LocalPosition: {x: 9.607, y: 0.671, z: -0.065571636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
