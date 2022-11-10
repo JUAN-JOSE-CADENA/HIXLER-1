@@ -32,7 +32,7 @@ public class CombateJugador : MonoBehaviour
 
         if (vida <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

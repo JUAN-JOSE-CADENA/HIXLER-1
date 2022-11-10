@@ -1346,6 +1346,7 @@ GameObject:
   - component: {fileID: 254038347}
   - component: {fileID: 254038346}
   - component: {fileID: 254038345}
+  - component: {fileID: 254038349}
   m_Layer: 0
   m_Name: SUCUBUS_ANI (1)
   m_TagString: Untagged
@@ -1456,6 +1457,32 @@ Transform:
   m_Father: {fileID: 2117660114}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &254038349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254038344}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.04, y: 2.01}
+    newSize: {x: 2.04, y: 2.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.04, y: 2.01}
+  m_EdgeRadius: 0
 --- !u!1 &265343688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2207,7 @@ GameObject:
   - component: {fileID: 374300815}
   - component: {fileID: 374300814}
   - component: {fileID: 374300818}
+  - component: {fileID: 374300819}
   m_Layer: 0
   m_Name: SUCUBUS_ANI
   m_TagString: Untagged
@@ -2290,6 +2318,32 @@ MonoBehaviour:
   distancia: 0
   puntoInicial: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
+--- !u!61 &374300819
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374300813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.006287694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.04, y: 2.01}
+    newSize: {x: 2.04, y: 2.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.04, y: 1.8381369}
+  m_EdgeRadius: 0
 --- !u!1 &376286858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,7 +3392,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 629306285
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1474229971, guid: 4beee00ff01304c92a8c3ae5c089ef92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3377,6 +3431,7 @@ GameObject:
   - component: {fileID: 592478325}
   - component: {fileID: 592478326}
   - component: {fileID: 592478328}
+  - component: {fileID: 592478329}
   m_Layer: 11
   m_Name: lava_0
   m_TagString: Untagged
@@ -3464,7 +3519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592478324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.407, y: -1.347, z: 0}
+  m_LocalPosition: {x: 0.407, y: -1.4, z: 0}
   m_LocalScale: {x: 0.1336799, y: 0.24107274, z: 0.24107274}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3497,6 +3552,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6, y: 1.71}
   m_EdgeRadius: 0
+--- !u!114 &592478329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592478324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f52964922609864692326ab3fcf7953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592846146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5113,6 +5180,7 @@ GameObject:
   - component: {fileID: 870573679}
   - component: {fileID: 870573678}
   - component: {fileID: 870573677}
+  - component: {fileID: 870573681}
   m_Layer: 0
   m_Name: SUCUBUS_ANI (2)
   m_TagString: Untagged
@@ -5223,6 +5291,32 @@ Transform:
   m_Father: {fileID: 2117660114}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &870573681
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870573676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.002574414}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.04, y: 2.01}
+    newSize: {x: 2.04, y: 2.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.04, y: 1.819494}
+  m_EdgeRadius: 0
 --- !u!1 &908903911
 GameObject:
   m_ObjectHideFlags: 0
@@ -7966,6 +8060,7 @@ GameObject:
   - component: {fileID: 1372326067}
   - component: {fileID: 1372326066}
   - component: {fileID: 1372326065}
+  - component: {fileID: 1372326069}
   m_Layer: 0
   m_Name: SUCUBUS_ANI (3)
   m_TagString: Untagged
@@ -8076,6 +8171,32 @@ Transform:
   m_Father: {fileID: 2117660114}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1372326069
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372326064}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.04, y: 2.01}
+    newSize: {x: 2.04, y: 2.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.04, y: 2.01}
+  m_EdgeRadius: 0
 --- !u!1 &1388805957
 GameObject:
   m_ObjectHideFlags: 0
@@ -11545,6 +11666,7 @@ GameObject:
   - component: {fileID: 1966951060}
   - component: {fileID: 1966951059}
   - component: {fileID: 1966951058}
+  - component: {fileID: 1966951062}
   m_Layer: 0
   m_Name: SUCUBUS_ANI (4)
   m_TagString: Untagged
@@ -11655,6 +11777,32 @@ Transform:
   m_Father: {fileID: 2117660114}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1966951062
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966951057}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.04, y: 2.01}
+    newSize: {x: 2.04, y: 2.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.04, y: 2.01}
+  m_EdgeRadius: 0
 --- !u!1 &2055207867
 GameObject:
   m_ObjectHideFlags: 0
