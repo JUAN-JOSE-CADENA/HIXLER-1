@@ -10,8 +10,8 @@ public class CombateJugador : MonoBehaviour
     [SerializeField] private BarraVida barraDeVida;
 
     private MovimientoJugador movimientoJugador;
-    //[SerializeField] private float tiempoPerdidaControl;
-    //private Animator animator;
+    [SerializeField] private float tiempoPerdidaControl;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -36,22 +36,22 @@ public class CombateJugador : MonoBehaviour
         }
     }
 
-    //public void TomarDaño(float daño, Vector2 posicion)
-    //{
-    //    vida -= daño;
-    //    animator.SetTrigger("Golpe");
-    //    StartCoroutine(PerderControl());
+    public void TomarDaño(float daño, Vector2 posicion)
+    {
+        vida -= daño;
+        animator.SetTrigger("Golpe");
+        StartCoroutine(PerderControl());
 
-    //    //perder control
-    //    movimientoJugador.Rebote(posicion);
-    //}
+        //perder control
+        movimientoJugador.Rebote(posicion);
+    }
 
-    //private IEnumerator PerderControl()
-    //{
-    //    movimientoJugador.sePuedeMover = false;
-    //    yield return new WaitForSeconds(tiempoPerdidaControl);
-    //    movimientoJugador.sePuedeMover = true;
-    //}
+    private IEnumerator PerderControl()
+    {
+        movimientoJugador.sePuedeMover = false;
+        yield return new WaitForSeconds(tiempoPerdidaControl);
+        movimientoJugador.sePuedeMover = true;
+    }
 
     public void Curar(float curacion)
     {
