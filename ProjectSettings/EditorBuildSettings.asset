@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Inicio.unity
-    guid: f97b7a9babbdae84dac05a14e4b65e19
+    path: Assets/Scenes/InicioCorregido.unity
+    guid: 5e128b7b34ced2f458227a49a63283d1
   - enabled: 1
     path: Assets/Scenes/First Level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ComoJugar.unity
     guid: 3635407fa9708ed49b38e701fe675eaa
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: f97b7a9babbdae84dac05a14e4b65e19
   m_configObjects: {}
