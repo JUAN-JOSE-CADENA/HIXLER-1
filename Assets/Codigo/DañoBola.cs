@@ -15,6 +15,12 @@ public class DañoBola : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+
+            //if(other.GetContact(0).normal.y <= -0.9)
+            //{
+            //    GameObject.FindGameObjectWithTag("Puerta").GetComponent<Puerta>().EnemigoEliminado();
+            //    Destroy(gameObject);
+            //}
             other.gameObject.GetComponent<CombateJugador>().TomarDaño(20, other.GetContact(0).normal);
         }
     }

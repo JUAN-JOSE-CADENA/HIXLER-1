@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - BolaFuego
+  - Enemigo
+  - Puerta
   layers:
   - Default
   - TransparentFX

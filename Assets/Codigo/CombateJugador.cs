@@ -16,8 +16,8 @@ public class CombateJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movimientoJugador = GetComponent<MovimientoJugador>();
-        //animator = GetComponent<Animator>();
+        //movimientoJugador = GetComponent<MovimientoJugador>();
+        animator = GetComponent<Animator>();
 
         vida = maximoVida;
         barraDeVida.InicializarBarraDeVida(vida);
@@ -32,7 +32,8 @@ public class CombateJugador : MonoBehaviour
 
         if (vida <= 0)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Muerte();
         }
     }
 
@@ -64,5 +65,11 @@ public class CombateJugador : MonoBehaviour
         {
             vida += curacion;
         }
+    }
+
+    private void Muerte()
+    {
+        //Instantiate(efectoMuerte, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
