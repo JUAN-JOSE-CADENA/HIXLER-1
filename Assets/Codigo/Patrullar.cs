@@ -29,7 +29,7 @@ public class Patrullar : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[siguientePaso].position, velocidadMovimiento * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, puntosMovimiento[siguientePaso].position) < distanciaMinima) ;
+        if (Vector2.Distance(transform.position, puntosMovimiento[siguientePaso].position) < distanciaMinima)
         {
             siguientePaso += 1;
 
