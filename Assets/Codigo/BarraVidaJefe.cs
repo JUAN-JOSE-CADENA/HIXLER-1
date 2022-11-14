@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BarraVida : MonoBehaviour
+public class BarraVidaJefe : MonoBehaviour
 {
-
     private Slider slider;
     //private Animator animator;
 
@@ -17,22 +16,22 @@ public class BarraVida : MonoBehaviour
 
     // Update is called once per frame
 
-    public void CambiarVidaMaxima(int vidaMaxima)
+    public void CambiarVidaMaximaJefe(int vidaMaximaJefe)
     {
-        slider.maxValue = vidaMaxima;
+        slider.maxValue = vidaMaximaJefe;
     }
 
 
-    public void CambiarVidaActual(int cantidadVida)
+    public void CambiarVidaActualJefe(int cantidadVidaJefe)
     {
-        slider.value = cantidadVida;
+        slider.value = cantidadVidaJefe;
         //animator.SetTrigger("Golpe");
     }
 
 
-    public void InicializarBarraDeVida(int cantidadVida)
+    public void InicializarBarraDeVidaJefe(int cantidadVidaJefe)
     {
-        CambiarVidaMaxima(cantidadVida);
-        CambiarVidaActual(cantidadVida);
+        CambiarVidaMaximaJefe(cantidadVidaJefe);
+        CambiarVidaActualJefe(cantidadVidaJefe);
     }
 }

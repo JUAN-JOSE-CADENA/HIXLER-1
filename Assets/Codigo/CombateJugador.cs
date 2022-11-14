@@ -5,8 +5,8 @@ using UnityEngine;
 public class CombateJugador : MonoBehaviour
 {
 
-    [SerializeField] private float vida;
-    [SerializeField] private float maximoVida;
+    [SerializeField] private int vida;
+    [SerializeField] private int maximoVida;
     [SerializeField] private BarraVida barraDeVida;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class CombateJugador : MonoBehaviour
     }
 
 
-    public void TomarDaño(float daño)
+    public void TomarDaño(int daño)
     {
         vida -= daño;
         barraDeVida.CambiarVidaActual(vida);
@@ -32,7 +32,7 @@ public class CombateJugador : MonoBehaviour
     }
 
 
-    public void Curar(float curacion)
+    public void Curar(int curacion)
     {
         if ((vida + curacion) > maximoVida)
         {
