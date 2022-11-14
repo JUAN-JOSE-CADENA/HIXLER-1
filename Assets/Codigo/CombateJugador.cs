@@ -9,15 +9,9 @@ public class CombateJugador : MonoBehaviour
     [SerializeField] private float maximoVida;
     [SerializeField] private BarraVida barraDeVida;
 
-    private MovimientoJugador movimientoJugador;
-    [SerializeField] private float tiempoPerdidaControl;
-    private Animator animator;
-
     // Start is called before the first frame update
     void Start()
     {
-        //movimientoJugador = GetComponent<MovimientoJugador>();
-        animator = GetComponent<Animator>();
 
         vida = maximoVida;
         barraDeVida.InicializarBarraDeVida(vida);
@@ -32,27 +26,11 @@ public class CombateJugador : MonoBehaviour
 
         if (vida <= 0)
         {
-            //gameObject.SetActive(false);
-            Muerte();
+
+            Destroy(gameObject);
         }
     }
 
-    public void TomarDaño(float daño, Vector2 posicion)
-    {
-        vida -= daño;
-        animator.SetTrigger("Golpe");
-        StartCoroutine(PerderControl());
-
-        //perder control
-        movimientoJugador.Rebote(posicion);
-    }
-
-    private IEnumerator PerderControl()
-    {
-        movimientoJugador.sePuedeMover = false;
-        yield return new WaitForSeconds(tiempoPerdidaControl);
-        movimientoJugador.sePuedeMover = true;
-    }
 
     public void Curar(float curacion)
     {
@@ -67,9 +45,4 @@ public class CombateJugador : MonoBehaviour
         }
     }
 
-    private void Muerte()
-    {
-        //Instantiate(efectoMuerte, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
 }

@@ -9,7 +9,7 @@ public class DañoLava : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<CombateJugador>().TomarDaño(100, other.GetContact(0).normal);
+            other.gameObject.GetComponent<CombateJugador>().TomarDaño(100);
         }
     }
 }

@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class DañoPinchos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float tiempoEntreDaño;
 
-    public void OnTriggerEnter2D(Collider2D other)
+    private float tiempoSiguienteDaño;
+
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("Daño");
+            tiempoSiguienteDaño -= Time.deltaTime;
+
+            if(tiempoSiguienteDaño <= 0)
+            {
+                other.GetComponent<CombateJugador>().TomarDaño(5);
+                tiempoSiguienteDaño = tiempoEntreDaño;
+            }
+            
         }
     }
 }
