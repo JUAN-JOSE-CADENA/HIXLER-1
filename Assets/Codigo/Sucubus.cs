@@ -15,7 +15,6 @@ public class Sucubus : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -33,6 +32,7 @@ public class Sucubus : MonoBehaviour
 
     public void Girar(Vector3 objetivo)
     {
+
         if (transform.position.x < objetivo.x)
         {
             spriteRenderer.flipX = true;

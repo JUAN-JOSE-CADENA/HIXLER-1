@@ -5,22 +5,11 @@ using UnityEngine;
 public class DañoPinchos : MonoBehaviour
 {
 
-    [SerializeField] private float tiempoEntreDaño;
-
-    private float tiempoSiguienteDaño;
-
-    private void OnTriggerStay2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            tiempoSiguienteDaño -= Time.deltaTime;
-
-            if(tiempoSiguienteDaño <= 0)
-            {
-                other.GetComponent<CombateJugador>().TomarDaño(5);
-                tiempoSiguienteDaño = tiempoEntreDaño;
-            }
-            
+            other.gameObject.GetComponent<CombateJugador>().TomarDaño(50);
         }
     }
 }

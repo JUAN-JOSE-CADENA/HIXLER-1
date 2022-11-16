@@ -22,6 +22,9 @@ public class MovimientoJugador : MonoBehaviour
     private bool salto = false;
 
 
+    //[SerializeField] private AudioClip caminoSonido;
+
+
     //ANIMACION
     private Animator animator;
 
@@ -81,6 +84,7 @@ public class MovimientoJugador : MonoBehaviour
         {
             //Girar
             Girar();
+            //ControladorSonidos.Instance.EjecutarSonido(caminoSonido);
         }
 
         else if(mover <0 && mirandoDerecha)
