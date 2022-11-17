@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 200
   suavizadoDeMovimiento: 0.057
-  fuerzaDeSalto: 250
+  fuerzaDeSalto: 300
   queEsSuelo:
     serializedVersion: 2
     m_Bits: 2048
