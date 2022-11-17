@@ -1276,12 +1276,11 @@ GameObject:
   - component: {fileID: 532799877}
   - component: {fileID: 532799876}
   - component: {fileID: 532799880}
-  - component: {fileID: 532799879}
   - component: {fileID: 532799881}
-  - component: {fileID: 532799882}
+  - component: {fileID: 532799883}
   m_Layer: 0
   m_Name: ASMADEO 1
-  m_TagString: Enemigo
+  m_TagString: Jefe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1366,28 +1365,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532799875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9226, y: -0.45, z: -1.71}
+  m_LocalPosition: {x: 5.9226, y: -0.82, z: -1.71}
   m_LocalScale: {x: 1.2135521, y: 1.2135521, z: 1.2135521}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &532799879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532799875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2db4295d73809c8469490e42aab28893, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidaJefe: 0
-  maximoVidaJefe: 300
-  barraDeVidaJefe: {fileID: 1374263436}
 --- !u!61 &532799880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1426,7 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4107b3020021a484c814fdf245f698b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &532799882
+--- !u!114 &532799883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1435,10 +1419,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 532799875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032b084b45bbcf94d99ff0e25573b1ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 2db4295d73809c8469490e42aab28893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 300
+  barraDeVida: {fileID: 1374263436}
   efectoMuerte: {fileID: 4762149722261845051, guid: 121c256920d5bed45a693bd88453bdf9, type: 3}
 --- !u!1 &538463797
 GameObject:
