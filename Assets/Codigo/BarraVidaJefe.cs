@@ -16,22 +16,22 @@ public class BarraVidaJefe : MonoBehaviour
 
     // Update is called once per frame
 
-    public void CambiarVidaMaximaJefe(int vidaMaximaJefe)
+    public void CambiarVidaMaxima(float vidaMaxima)
     {
-        slider.maxValue = vidaMaximaJefe;
+        slider.maxValue = vidaMaxima;
     }
 
 
-    public void CambiarVidaActualJefe(int cantidadVidaJefe)
+    public void CambiarVidaActual(float cantidadVida)
     {
-        slider.value = cantidadVidaJefe;
+        slider.value = cantidadVida;
         //animator.SetTrigger("Golpe");
     }
 
 
-    public void InicializarBarraDeVidaJefe(int cantidadVidaJefe)
+    public void InicializarBarraDeVida(float cantidadVida)
     {
-        CambiarVidaMaximaJefe(cantidadVidaJefe);
-        CambiarVidaActualJefe(cantidadVidaJefe);
+        CambiarVidaMaxima(cantidadVida);
+        CambiarVidaActual(cantidadVida);
     }
 }

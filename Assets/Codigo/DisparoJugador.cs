@@ -35,6 +35,15 @@ public class DisparoJugador : MonoBehaviour
                 raycastHit2D.transform.GetComponent<Enemigo>().TomarDaño(20);
                 Instantiate(efectoImpacto, raycastHit2D.point, Quaternion.identity);
                 StartCoroutine(GenerarLinea(raycastHit2D.point));
+
+            }
+
+            if (raycastHit2D.transform.CompareTag("Jefe"))
+            {
+                raycastHit2D.transform.GetComponent<Jefe>().TomarDaño(20);
+                Instantiate(efectoImpacto, raycastHit2D.point, Quaternion.identity);
+                StartCoroutine(GenerarLinea(raycastHit2D.point));
+
             }
         }
     }
