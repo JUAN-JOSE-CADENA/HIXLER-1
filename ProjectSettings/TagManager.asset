@@ -8,6 +8,7 @@ TagManager:
   - Enemigo
   - Puerta
   - Jefe
+  - Sucubus
   layers:
   - Default
   - TransparentFX

@@ -45,6 +45,14 @@ public class DisparoJugador : MonoBehaviour
                 StartCoroutine(GenerarLinea(raycastHit2D.point));
 
             }
+
+            if (raycastHit2D.transform.CompareTag("Sucubus"))
+            {
+                raycastHit2D.transform.GetComponent<EnemigoSucubus>().TomarDaño(20);
+                Instantiate(efectoImpacto, raycastHit2D.point, Quaternion.identity);
+                StartCoroutine(GenerarLinea(raycastHit2D.point));
+
+            }
         }
     }
 
